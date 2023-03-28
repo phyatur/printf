@@ -51,7 +51,7 @@ int print_heX(va_list list);
 
 unsigned int base_len(unsigned int, int);
 
-char *rev_string(char *);
+char *rev_str(char *);
 
 void write_base(char *str);
 
