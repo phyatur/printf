@@ -1,25 +1,26 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _PRINT_F_
+#define _PRINT_F_
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
 /**
-* struct convert - a structure for functions and symbols
+* struct convert - defines a structure for symbols and functions
 *
-* @sym: operator
-* @func: The function associated
+* @sym: The operator
+* @f: The function associated
 */
 
 struct convert
 {
 	char *sym;
-	int (*func)(va_list);
+	int (*f)(va_list);
 };
-typedef struct convert conv;
 
-int parser(const char *format, conv f_list[], va_list arg_list);
+typedef struct convert conver_t;
+
+int parser(const char *format, conver_t f_list[], va_list arg_list);
 
 int _printf(const char *format, ...);
 
@@ -27,23 +28,23 @@ int _write_char(char);
 
 int print_char(va_list);
 
-int print_str(va_list);
+int print_string(va_list);
 
-int print_per(va_list);
+int print_percent(va_list);
 
-int print_int(va_list);
+int print_integer(va_list);
 
-int print_num(va_list);
+int print_number(va_list);
 
-int print_bi(va_list);
+int print_binary(va_list);
 
-int print_reve(va_list arg);
+int print_reversed(va_list arg);
 
 int rot13(va_list);
 
-int unsigned_int(va_list);
+int unsigned_integer(va_list);
 
-int print_oct(va_list list);
+int print_octal(va_list list);
 
 int print_hex(va_list list);
 
@@ -51,7 +52,7 @@ int print_heX(va_list list);
 
 unsigned int base_len(unsigned int, int);
 
-char *rev_str(char *);
+char *rev_string(char *);
 
 void write_base(char *str);
 

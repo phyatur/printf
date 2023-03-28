@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- * print_char - a function that prints character
- *
+ * print_char - Prints character
  * @list: list of arguments
- *
- * Return: the amount of characters printed.
+ * Return: Will return the amount of characters printed.
  */
 
 int print_char(va_list list)
@@ -15,14 +13,12 @@ int print_char(va_list list)
 }
 
 /**
- * print_str - a function that prints a string
- *
+ * print_string - Prints a string
  * @list: list of arguments
- *
- * Return: the amount of characters printed.
+ * Return: Will return the amount of characters printed.
  */
 
-int print_str(va_list list)
+int print_string(va_list list)
 {
 	int i;
 	char *str;
@@ -36,44 +32,38 @@ int print_str(va_list list)
 }
 
 /**
- * print_per - a funtion that prints a percent symbol
- *
+ * print_percent - Prints a percent symbol
  * @list: list of arguments
- *
- * Return: the amount of characters printed.
+ * Return: Will return the amount of characters printed.
  */
 
-int print_per(__attribute__((unused))va_list list)
+int print_percent(__attribute__((unused))va_list list)
 {
 	_write_char('%');
 	return (1);
 }
 
 /**
- * print_int - a function that prints an integer
- *
+ * print_integer - Prints an integer
  * @list: list of arguments
- *
- * Return: the amount of characters printed.
+ * Return: Will return the amount of characters printed.
  */
 
-int print_int(va_list list)
+int print_integer(va_list list)
 {
 	int num_length;
 
-	num_length = print_num(list);
+	num_length = print_number(list);
 	return (num_length);
 }
 
 /**
- * unsigned_int - a function that prints unsigned integers
- *
- * @list: list of argumets
- *
+ * unsigned_integer - Prints Unsigned integers
+ * @list: List of all of the argumets
  * Return: a count of the numbers
  */
 
-int unsigned_int(va_list list)
+int unsigned_integer(va_list list)
 {
 	unsigned int num;
 

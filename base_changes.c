@@ -1,15 +1,14 @@
-#include <stdio.h>
 #include "main.h"
-
+#include <stdio.h>
 int hex_check(int, char);
 
 /**
- * print_bi - converts a number from base 10 to binary
- * @list: list arguments passed onto function
+ * print_binary - Converts a number from base 10 to binary
+ * @list: List of arguments passed to this function
  * Return: The length of the number printed
  */
 
-int print_bi(va_list list)
+int print_binary(va_list list)
 {
 	unsigned int num;
 	int i, len;
@@ -35,7 +34,7 @@ int print_bi(va_list list)
 		num = num / 2;
 	}
 	str[i] = '\0';
-	rev_str = rev_str(str);
+	rev_str = rev_string(str);
 	if (rev_str == NULL)
 		return (-1);
 	write_base(rev_str);
@@ -45,12 +44,12 @@ int print_bi(va_list list)
 }
 
 /**
- * print_oct - prints the numeric representation of a number in octal base
- * @list: list of all the arguments passed to the program
- * Return: number of symbols printed to stdout
+ * print_octal - Prints the numeric representation of a number in octal base
+ * @list: List of all the arguments passed to the program
+ * Return: Number of symbols printed to stdout
  */
 
-int print_oct(va_list list)
+int print_octal(va_list list)
 {
 	unsigned int num;
 	int len;
@@ -75,7 +74,7 @@ int print_oct(va_list list)
 
 	}
 	octal_rep[len] = '\0';
-	rev_str = rev_str(octal_rep);
+	rev_str = rev_string(octal_rep);
 	if (rev_str == NULL)
 		return (-1);
 
@@ -122,7 +121,7 @@ int print_hex(va_list list)
 		num = num / 16;
 	}
 	hex_rep[len] = '\0';
-	rev_hex = rev_str(hex_rep);
+	rev_hex = rev_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
 	write_base(rev_hex);
@@ -133,9 +132,9 @@ int print_hex(va_list list)
 
 
 /**
- * print_heX - prints a representation of a decimal number on base16 Uppercase
- * @list: list of the arguments passed to the function
- * Return: number of characters printed
+ * print_heX - Prints a representation of a decimal number on base16 Uppercase
+ * @list: List of the arguments passed to the function
+ * Return: Number of characters printed
  */
 
 int print_heX(va_list list)
@@ -169,7 +168,7 @@ int print_heX(va_list list)
 		num = num / 16;
 	}
 	hex_rep[len] = '\0';
-	rev_hex = rev_str(hex_rep);
+	rev_hex = rev_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
 	write_base(rev_hex);
@@ -179,10 +178,10 @@ int print_heX(va_list list)
 }
 
 /**
- * hex_check - checks which hex function is calling it
- * @num: number to convert into letter
- * @x: tells which hex function is calling it
- * Return: ASCII value for a letter
+ * hex_check - Checks which hex function is calling it
+ * @num: Number to convert into letter
+ * @x: Tells which hex function is calling it
+ * Return: Ascii value for a letter
  */
 
 int hex_check(int num, char x)

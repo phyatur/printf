@@ -1,13 +1,12 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_reve - calls a function to reverse and print a string
- * @arg: argument passed to the function
- * Return: the amount of characters printed
+ * print_reversed - Calls a function to reverse and print a string
+ * @arg: Argument passed to the function
+ * Return: The amount of characters printed
  */
 
-int print_reve(va_list arg)
+int print_reversed(va_list arg)
 {
 	int len;
 	char *str;
@@ -16,7 +15,7 @@ int print_reve(va_list arg)
 	str = va_arg(arg, char *);
 	if (str == NULL)
 		return (-1);
-	ptr = rev_str(str);
+	ptr = rev_string(str);
 	if (ptr == NULL)
 		return (-1);
 	for (len = 0; ptr[len] != '\0'; len++)
