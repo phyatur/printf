@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include 'main.h'
+#include "main.h"
 
 /**
  * print_reve - calls a function to reverse and print a string
@@ -7,7 +7,7 @@
  * Return: the amount of characters printed
  */
 
-int print_reversed(va_list arg)
+int print_reve(va_list arg)
 {
 	int len;
 	char *str;
