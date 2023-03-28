@@ -8,13 +8,13 @@
 /**
 * struct convert - a structure for functions and symbols
 *
-* @symb: operator
+* @sym: operator
 * @func: The function associated
 */
 
 struct convert
 {
-	char *symb;
+	char *sym;
 	int (*func)(va_list);
 };
 typedef struct convert conv;
